@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const Stories = () => {
+const Playlist = () => {
   return (
     <View>
       <Text>Stories</Text>
@@ -9,4 +9,4 @@ const Stories = () => {
   )
 }
 
-export default Stories
+export default Playlist

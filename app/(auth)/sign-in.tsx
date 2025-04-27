@@ -44,7 +44,7 @@ const SignIn = () => {
     try {
       loginSchema.parse(formData);
       console.log('Form Submitted!', formData);
-      router.push('/(root)');
+      router.push('/(root)/(tabs)/home');
     } catch (error) {
       if (error instanceof z.ZodError) {
         const fieldErrors: Record<string, string> = {};

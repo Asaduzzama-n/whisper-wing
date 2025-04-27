@@ -153,7 +153,7 @@ const Welcome = () => {
                   </TouchableOpacity>
                 </View>
       
-                <TouchableOpacity onPress={() => router.push('/(root)')}>
+                <TouchableOpacity onPress={() => router.push('/(root)/(tabs)/home')}>
                   <Text className="text-[#52178D] text-lg underline font-medium my-2">
                     Continue As Guest
                   </Text>
