@@ -1,4 +1,4 @@
-import { View, TextInput, TouchableOpacity, Image, Text } from 'react-native';
+import { View, TextInput, TouchableOpacity, Image, Text, ScrollView } from 'react-native';
 import React from 'react';
 
 import { WebView } from 'react-native-webview';
@@ -9,6 +9,7 @@ import AntDesign from '@expo/vector-icons/AntDesign';
 import StoryDetailsCard from '@/components/storyDetailsCard';
 import FeaturedStory from '@/components/FeaturedStory';
 import { Link } from 'expo-router';
+import SubscriptionSection from '@/components/subscriptionSection';
 
 const Home = () => {
   return (
@@ -77,15 +78,27 @@ const Home = () => {
         </View>
 
         {/* Story Details */}
-        <StoryDetailsCard></StoryDetailsCard>
+       <ScrollView scrollEnabled bounces={false}>
+       <StoryDetailsCard></StoryDetailsCard>
         {/* Featured Story */}
         <View className='flex-1'>
+          <View className='flex-row justify-between items-center mt-5 py-2 px-4'>
+            <Text className='text-lg font-semibold text-purple-600'>Children Story</Text>
+            <Link className='text-md font-medium text-purple-600' href={'/(root)/(tabs)/playlist'}>View more</Link>
+          </View>
+          <FeaturedStory></FeaturedStory>
+
+            <View className='p-4'>
+              <SubscriptionSection></SubscriptionSection>
+            </View>
+
           <View className='flex-row justify-between items-center mt-5 py-2 px-4'>
             <Text className='text-lg font-semibold text-purple-600'>Featured Story</Text>
             <Link className='text-md font-medium text-purple-600' href={'/(root)/(tabs)/playlist'}>View more</Link>
           </View>
           <FeaturedStory></FeaturedStory>
         </View>
+       </ScrollView>
       </View>
     </View>
   );

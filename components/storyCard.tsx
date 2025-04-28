@@ -20,7 +20,7 @@ const StoryCard: React.FC<StoryCardProps> = ({ story, index }) => {
     >
       <TouchableOpacity
         activeOpacity={0.8}
-        className="bg-purple-100 rounded-2xl p-2"
+        className="bg-white rounded-2xl p-2"
         style={{ height: CARD_WIDTH * 1.3 }}
       >
         <View className="flex-1 gap-y-5">
@@ -38,11 +38,11 @@ const StoryCard: React.FC<StoryCardProps> = ({ story, index }) => {
           </View>
             <Text className="text-xs font-medium text-gray-800">{story.language}</Text>
           <View className=" flex-row justify-between">
-           <View className='flex-row gap-x-2'>
-            <MaterialCommunityIcons name='clock-outline' size={16}></MaterialCommunityIcons>
-            <Text className="text-xs text-purple-500">{Math.floor(story.duration / 60)} min</Text>
+           <View className='flex-row gap-x-2 items-center justify-center'>
+            <MaterialCommunityIcons name='clock-outline' size={16} className='' color={"#"}></MaterialCommunityIcons>
+            <Text className="text-md text-purple-500">{Math.floor(story.duration / 60)} min</Text>
            </View>
-            <Text className="text-xs text-purple-500">{story.totalPlayCount} plays</Text>
+            <Text className="text-md text-purple-500">{story.totalPlayCount} plays</Text>
           </View>
         </View>
       </TouchableOpacity>
